@@ -4,50 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basics</title>
+    <style>
+      figure {
+        text-align: center;
+        width: 50%;
+
+        img{
+          width: 100%;
+        }
+      }
+      .container{
+        display: flex;
+      }
+    </style>
   </head>
   <body style="background-color: pink">
     <h1 style="color: white; text-align: center">-so bigger-@&#8482;</h1>
-    <div
-      style="
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-      "
-    >
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-          align-items: center;
-        "
-      >
+    <div class="container">
+      <figure>
         <img
           src="https://logodix.com/logo/2015030.jpg"
           alt="shopee"
-          style="width: 100%"
         />
-        <a href="https://shopee.co.th/">Shopee</a>
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-          align-items: center;
-        "
-      >
+        <figcaption>
+          <a href="https://shopee.co.th/" target="_blank">Shopee</a>
+        </figcaption>
+      </figure>
+      <figure>
         <img
           src="https://www.webspert.com.my/img/integration/apps_lazada-id-sq.png"
           alt="lazada"
-          style="width: 100%"
-        /><a href="https://www.lazada.co.th/#?">Lazada</a>
-      </div>
+        />
+        <figcaption>
+          <a href="https://www.lazada.co.th/#?" target="_blank">Lazada</a>
+        </figcaption>
+      </figure>
     </div>
     <hr style="border: 1px solid black; margin-top: 1rem" />
-    <div style="text-align: end; font-family: monospace;font-style: italic;">&copy; Tak 2024</div>
+    <div style="text-align: end; font-family: monospace; font-style: italic;">&copy; Chaks 2024</div>
   </body>
 </html>

@@ -1,0 +1,13 @@
+.leftbox {
+    flex: 1; 
+    background-color:green; 
+    height:50px; 
+    border: 1px solid black;
+}
+
+.rightbox {
+    flex: 1; 
+    background-color:aqua; 
+    height:50px; 
+    border: 1px solid black;
+}

@@ -1,0 +1,42 @@
+.image1 {
+    background-image: url("https://wallpapers-clan.com/wp-content/uploads/2023/12/dolphin-cow-jumping-sea-meme-desktop-wallpaper-preview.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.image2 {
+    background-image: url("https://i.imgflip.com/8q6as5.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment:fixed;
+    }
+}

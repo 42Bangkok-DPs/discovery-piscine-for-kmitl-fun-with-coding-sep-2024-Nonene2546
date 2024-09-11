@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="topic">Basic Calculator</div>
+    <form class="calc">
+      <input type="text" id="left" />
+      <select id="operator">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="mod">%</option>
+      </select>
+      <input type="text" id="right" />
+      <button type="submit">Try me!</button>
+    </form>
+    <script>
+      $(document).ready(function(){
+        let timer = setInterval(useMe, 30000);
+        function useMe(){
+          alert("Please, use me...");
+          // clearInterval(timer);
+          // timer = setInterval(useMe, 30000);
+        }
+
+        $(".calc").submit(function(event){
+          event.preventDefault();
+          const operator = $("#operator").val();
+          const left = Number($("#left").val());
+          const right = Number($("#right").val());
+          if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+            alert("Error :(");
+            return;
+          }
+          if ((operator == "div" && right == 0) || (operator == "mod" && right == 0)) {
+            alert("It’s over 9000!");
+            return;
+          }
+          if (operator == "add") {
+            alert(left + right);
+          } else if (operator == "sub") {
+            alert(left - right);
+          } else if (operator == "mul") {
+            alert(left * right);
+          } else if (operator == "div") {
+            alert(left / right);
+          } else if (operator == "mod") {
+            alert(left % right);
+          }
+        })
+
+
+      });
+    </script>
+  </body>
+</html>

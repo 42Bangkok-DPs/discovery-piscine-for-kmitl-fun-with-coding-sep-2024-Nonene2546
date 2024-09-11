@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex01</title>
+    <link rel="stylesheet" href="balloon.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      let indexColor = 0;
+      let colors = ["red", "green", "blue"];
+      $(document).ready(function () {
+        $("#balloon").on({
+          click: function () {
+            indexColor = (indexColor + 1) % 3;
+            $("#balloon").css({
+              width: "+=10px",
+              height: "+=10px",
+              backgroundColor: colors[indexColor],
+            });
+            if ($("#balloon").width() > 420) {
+              indexColor = 0
+              $("#balloon").css({
+                width: "200px",
+                height: "200px",
+                backgroundColor: colors[indexColor],
+              });
+            }
+          },
+          mouseleave: function () {
+            if ($("#balloon").width() > 200) {
+              indexColor = (((indexColor - 1) % 3) + 3) % 3;
+              $("#balloon").css({
+                width: "-=10px",
+                height: "-=10px",
+                backgroundColor: colors[indexColor],
+              });
+            }
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="balloon" id="balloon"></div>
+  </body>
+</html>

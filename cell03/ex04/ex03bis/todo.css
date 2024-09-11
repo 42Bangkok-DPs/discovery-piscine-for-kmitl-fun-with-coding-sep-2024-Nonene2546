@@ -1,0 +1,52 @@
+#ft_list{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: start;
+    /* background-color: gray; */
+    align-items: center;
+    border: 1px solid black;
+    gap: 0.5rem;
+    min-height: 100px;
+}
+
+#ft_list a:nth-child(odd) div{
+    background-color: lightblue;
+}
+
+a:hover{
+    cursor:pointer;
+    background-color: gray;
+}
+a{
+    text-decoration: none;
+    width: 100%;
+
+}
+
+.todo{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+}
+
+.new-btn{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.new-btn button{
+    width: 100%;
+    height: 3rem;
+}
+

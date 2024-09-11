@@ -11,11 +11,10 @@
         <button id="colorButton">Click Me</button>
     </div>
     <script>
-        const colors = ['red', 'black', 'blue', 'green', 'yellow', 'pink'];
         let currentColorIndex = 0;
         document.getElementById('colorButton').addEventListener('click', function() {
-            document.body.style.backgroundColor = colors[currentColorIndex];
-            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
         });
     </script>
 </body>

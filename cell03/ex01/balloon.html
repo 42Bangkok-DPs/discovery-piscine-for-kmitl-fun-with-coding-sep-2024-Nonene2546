@@ -45,6 +45,7 @@
     });
 
     balloon.addEventListener('mouseleave', function () {
+        currentSize -= 5;
         if(currentSize < 200){
             currentSize = 200;
         }

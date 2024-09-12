@@ -35,7 +35,7 @@
           const operator = $("#operator").val();
           const left = Number($("#left").val());
           const right = Number($("#right").val());
-          if (isNaN(left) || isNaN(right) || left < 0 || right < 0 || $("#left").val() == "" || $("#right").val() == "") {
+          if (isNaN(left) || isNaN(right) || left < 0 || right < 0 || $("#left").val() == "" || $("#right").val() == "" || !Number.isInteger(left) || !Number.isInteger(right)) {
             alert("Error :(");
             return;
           }

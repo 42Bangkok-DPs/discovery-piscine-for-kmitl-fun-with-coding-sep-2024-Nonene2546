@@ -1,31 +1,33 @@
 $(document).ready(function () {
   let todoId = 0;
   $(window).on("load", loadTodo);
+
   function saveTodo() {
     const todos = [];
     const links = $("#ft_list").find("a").toArray();
     links.forEach((link) => {
       const todo = {
         id: link.id,
-        text: encodeURIComponent($(link).find(".todo").text()),
+        text: encodeURIComponent($(link).find(".todo").text()), // Encode text
       };
       todos.push(todo);
     });
-    const encode_todos = encodeURIComponent(JSON.stringify(todos));
-    document.cookie = encode_todos; 
+    document.cookie = `todos=${JSON.stringify(todos)}; path=/;`;
   }
 
   function loadTodo() {
-    const cookieString = document.cookie;
+    const cookieString = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("todos="));
     if (cookieString) {
-      const todos = JSON.parse(decodeURIComponent(cookieString));
+      const todos = JSON.parse(cookieString.split("=")[1]);
       todos.forEach((todo) => {
         $("<a></a>")
           .attr("id", todo.id)
           .click(function () {
             deleteTodo(this.id);
           })
-          .append($("<div></div>").addClass("todo").text(decodeURIComponent(todo.text)))
+          .append($("<div></div>").addClass("todo").text(decodeURIComponent(todo.text))) // Decode text
           .appendTo($("#ft_list"));
       });
       todoId = todos.length
@@ -35,6 +37,7 @@ $(document).ready(function () {
   }
 
   $(".new-btn").click(newTodo);
+  
   function newTodo() {
     let todoMsg = prompt("Enter a new todo:");
     if (todoMsg) {

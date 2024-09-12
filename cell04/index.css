@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+.handjet {
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "ELGR" 1,
+      "ELSH" 2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    position: sticky;
+    top: 0;
+    background-image: url('https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg');
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    ul{
+        gap: 10px;
+    }
+}
+
+#logo {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1, h2 {
+    color: white;
+    font-family: handjet;
+    letter-spacing: 3px;
+    margin: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.menu a:hover {
+    color: black;
+    background-color: white;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.select-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    text-align: center;
+}
+
+.select-container section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.select-container section img:hover {
+    transform: scale(1.1);
+}
+
+.select-container section a {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.select-container section a:hover {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (width < 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #logo {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .select-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .select-container section {
+        max-width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .select-container section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
